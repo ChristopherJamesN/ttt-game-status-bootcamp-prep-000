@@ -35,10 +35,12 @@ def won?(board)
 end
 
 def full?(board)
-  board.each do |position|
+  count = 0
+  while count < 9
     if position_taken?(board, position.to_i) == false
       return false
     end
+    count += 1
   end
   return true
 end
